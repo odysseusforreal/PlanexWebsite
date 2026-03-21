@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,28 +8,31 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Planex - Space Exploration Survival">
   <meta property="og:description" content="Explore. Survive. Conquer. A massive procedurally generated sci-fi universe built for Roblox.">
-  <meta property="og:url" content="https://planex.life"> 
-  <meta property="og:image" content="https://odysseusforreal.github.io/PlanexWebsite/planex_text.png"> 
+  <meta property="og:url" content="https://planex.life">
+  <meta property="og:image" content="https://odysseusforreal.github.io/PlanexWebsite/planex_text.png">
   <meta name="theme-color" content="#a855f7">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <section class="hero">
     <div class="stars"></div>
     <div class="container">
       <div class="status-badge">STATUS: EARLY DEVELOPMENT</div>
-      
       <img src="planex_text.png" alt="PLANEX" class="hero-logo">
-      
       <p class="hero-subtitle">Explore. Survive. Conquer. A massive sci-fi universe currently being built for Roblox.</p>
       <div class="cta-buttons">
-        <a href="https://discord.gg/3aAG7prQm3" class="btn btn-primary"><i class="fab fa-discord"></i> Join the Discord (Dev Updates)</a>
-        <a href="https://www.patreon.com/cw/PLANEX_ROBLOX" class="btn btn-secondary"><i class="fab fa-patreon"></i> Support on Patreon</a>
+        <a href="https://discord.gg/3aAG7prQm3" class="btn btn-primary">
+          <i class="fab fa-discord"></i> Join the Discord (Dev Updates)
+        </a>
+        <a href="https://www.patreon.com/cw/PLANEX_ROBLOX" class="btn btn-secondary">
+          <i class="fab fa-patreon"></i> Support on Patreon
+        </a>
       </div>
     </div>
   </section>
@@ -48,10 +51,26 @@
     <div class="container">
       <h2 class="section-title">Transmission Hub</h2>
       <div class="community-grid">
-        <a href="https://www.youtube.com/@LuanacyRoblox" class="community-card youtube-card"><i class="fab fa-youtube"></i><h3>YouTube</h3><p>Watch Devlogs</p></a>
-        <a href="https://www.patreon.com/cw/PLANEX_ROBLOX" class="community-card patreon-card"><i class="fab fa-patreon"></i><h3>Patreon</h3><p>Support the Development</p></a>
-        <a href="https://www.roblox.com/communities/1022796923" class="community-card roblox-card"><i class="fas fa-users"></i><h3>Roblox Community</h3><p>Join the Group</p></a>
-        <a href="https://discord.gg/3aAG7prQm3" class="community-card discord-card"><i class="fab fa-discord"></i><h3>Discord</h3><p>Join the Comms</p></a>
+        <a href="https://www.youtube.com/@LuanacyRoblox" class="community-card youtube-card">
+          <i class="fab fa-youtube"></i>
+          <h3>YouTube</h3>
+          <p>Watch Devlogs</p>
+        </a>
+        <a href="https://www.patreon.com/cw/PLANEX_ROBLOX" class="community-card patreon-card">
+          <i class="fab fa-patreon"></i>
+          <h3>Patreon</h3>
+          <p>Support the Development</p>
+        </a>
+        <a href="https://www.roblox.com/communities/1022796923" class="community-card roblox-card">
+          <i class="fas fa-users"></i>
+          <h3>Roblox Community</h3>
+          <p>Join the Group</p>
+        </a>
+        <a href="https://discord.gg/3aAG7prQm3" class="community-card discord-card">
+          <i class="fab fa-discord"></i>
+          <h3>Discord</h3>
+          <p>Join the Comms</p>
+        </a>
       </div>
     </div>
   </section>
@@ -89,8 +108,12 @@
 
   <script>
     document.addEventListener('contextmenu', e => e.preventDefault());
+
     function createStars() {
       const container = document.querySelector('.stars');
+      if (!container) return;
+
+      // Static Stars
       for (let i = 0; i < 200; i++) {
         const star = document.createElement('div');
         star.className = 'star';
@@ -100,8 +123,20 @@
         star.style.animationDuration = (Math.random() * 3 + 2) + 's';
         container.appendChild(star);
       }
+
+      // Falling Stars
+      for (let i = 0; i < 15; i++) {
+        const fallingStar = document.createElement('div');
+        fallingStar.className = 'falling-star';
+        fallingStar.style.left = (Math.random() * 150 - 25) + '%';
+        fallingStar.style.animationDelay = Math.random() * 8 + 's';
+        fallingStar.style.animationDuration = (Math.random() * 2 + 4) + 's';
+        container.appendChild(fallingStar);
+      }
     }
+
     createStars();
   </script>
+
 </body>
 </html>
