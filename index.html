@@ -2,141 +2,507 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Planex - Space Exploration Survival</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>PLANEX: Procedural Space Exploration on Roblox (Pre-Alpha Almost Here)</title>
+  <meta name="description" content="PLANEX is a procedurally generated space exploration and survival game on Roblox, completely rebuilt from the ground up. The first playable pre-alpha is almost here. Join the Discord to hear the date first.">
+  <link rel="canonical" href="https://planex.life/">
+  <meta name="theme-color" content="#06070b">
+  <meta name="color-scheme" content="dark">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Planex - Space Exploration Survival">
-  <meta property="og:description" content="Explore. Survive. Conquer. A massive procedurally generated sci-fi universe built for Roblox.">
-  <meta property="og:url" content="https://planex.life">
-  <meta property="og:image" content="https://odysseusforreal.github.io/PlanexWebsite/planex_text.png">
-  <meta name="theme-color" content="#a855f7">
+  <meta property="og:site_name" content="PLANEX">
+  <meta property="og:title" content="PLANEX: Pre-Alpha 1.00 Is Almost Here">
+  <meta property="og:description" content="A procedurally generated universe on Roblox, rebuilt from the ground up. Every star is a sun. Every sun has worlds.">
+  <meta property="og:url" content="https://planex.life/">
+  <meta property="og:image" content="https://planex.life/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The PLANEX logo above a ringed planet at sunrise">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PLANEX: Pre-Alpha 1.00 Is Almost Here">
+  <meta name="twitter:description" content="A procedurally generated universe on Roblox, rebuilt from the ground up.">
+  <meta name="twitter:image" content="https://planex.life/assets/img/og-image.jpg">
 
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&family=Barlow+Semi+Condensed:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/hero-ringed-sunrise.webp" imagesrcset="assets/img/hero-ringed-sunrise-960.webp 960w, assets/img/hero-ringed-sunrise.webp 1737w" imagesizes="100vw" fetchpriority="high">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "PLANEX",
+    "url": "https://planex.life/",
+    "image": "https://planex.life/assets/img/og-image.jpg",
+    "description": "A procedurally generated space exploration and survival game on Roblox.",
+    "genre": ["Space exploration", "Survival", "Sandbox"],
+    "gamePlatform": "Roblox",
+    "sameAs": [
+      "https://discord.gg/3aAG7prQm3",
+      "https://www.youtube.com/@LuanacyRoblox",
+      "https://www.patreon.com/cw/PLANEX_ROBLOX",
+      "https://www.roblox.com/communities/1022796923"
+    ]
+  }
+  </script>
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-  <section class="hero">
-    <div class="stars"></div>
-    <div class="container">
-      <div class="status-badge">STATUS: EARLY DEVELOPMENT</div>
-      <img src="planex_text.png" alt="PLANEX" class="hero-logo">
-      <p class="hero-subtitle">Explore. Survive. Conquer. A massive sci-fi universe currently being built for Roblox.</p>
-      <div class="cta-buttons">
-        <a href="https://discord.gg/3aAG7prQm3" class="btn btn-primary">
-          <i class="fab fa-discord"></i> Join the Discord (Dev Updates)
-        </a>
-        <a href="https://www.patreon.com/cw/PLANEX_ROBLOX" class="btn btn-secondary">
-          <i class="fab fa-patreon"></i> Support on Patreon
-        </a>
-      </div>
-    </div>
-  </section>
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-discord" viewBox="0 0 24 24"><path fill="currentColor" d="M20.317 4.37a19.79 19.79 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.865-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.74 19.74 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.058a.082.082 0 0 0 .031.056 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.873-1.295 1.226-1.994a.076.076 0 0 0-.042-.106 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .078-.01c3.928 1.793 8.180 1.793 12.061 0a.074.074 0 0 1 .079.009c.12.099.246.198.373.292a.077.077 0 0 1-.007.128 12.3 12.3 0 0 1-1.873.891.077.077 0 0 0-.041.107c.36.698.772 1.363 1.225 1.993a.076.076 0 0 0 .084.029 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.029zM8.02 15.331c-1.183 0-2.157-1.086-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.332-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.086-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.332-.946 2.418-2.157 2.418z"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></symbol>
+    <symbol id="i-patreon" viewBox="0 0 24 24"><path fill="currentColor" d="M22.957 7.21c-.004-3.064-2.391-5.576-5.191-6.482-3.478-1.125-8.064-.962-11.384.604C2.357 3.231 1.093 7.391 1.046 11.540c-.039 3.411.302 12.396 5.369 12.46 3.765.047 4.326-4.804 6.068-7.141 1.24-1.662 2.836-2.132 4.801-2.618 3.376-.836 5.678-3.501 5.673-7.031z"/></symbol>
+    <symbol id="i-roblox" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.164 0 0 18.832 18.836 24 24 5.168 5.164 0zm8.746 15.744-5.646-1.523 1.516-5.65 5.65 1.519-1.52 5.654z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></symbol>
+  </svg>
 
-  <section class="about">
-    <div class="container">
-      <h2 class="section-title">Discover the Unknown</h2>
-      <div class="about-card">
-        <p>Awaken in the uncharted depths of the Planex galaxy, a massive, procedurally generated universe where every star is a sun, and every sun is orbited by unique, unexplored worlds. From toxic, luminescent fungal planets to desolate, frozen moons, the unknown awaits. You begin with nothing but a damaged exosuit and a stranded ship. Your first objective? Survive.</p>
-        <p>Gather resources, craft advanced technology, and rebuild your hyperdrive to take to the stars. Whether you choose to construct sprawling atmospheric bases, trade rare isotopes with other explorers, or brave the cosmic voids in search of ancient anomalies, your journey is entirely your own. Team up with friends, upgrade your fleet, and conquer the galaxy together.</p>
-      </div>
-    </div>
-  </section>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <section class="community">
-    <div class="container">
-      <h2 class="section-title">Transmission Hub</h2>
-      <div class="community-grid">
-        <a href="https://www.youtube.com/@LuanacyRoblox" class="community-card youtube-card">
-          <i class="fab fa-youtube"></i>
-          <h3>YouTube</h3>
-          <p>Watch Devlogs</p>
-        </a>
-        <a href="https://www.patreon.com/cw/PLANEX_ROBLOX" class="community-card patreon-card">
-          <i class="fab fa-patreon"></i>
-          <h3>Patreon</h3>
-          <p>Support the Development</p>
-        </a>
-        <a href="https://www.roblox.com/communities/1022796923" class="community-card roblox-card">
-          <i class="fas fa-users"></i>
-          <h3>Roblox Community</h3>
-          <p>Join the Group</p>
-        </a>
-        <a href="https://discord.gg/3aAG7prQm3" class="community-card discord-card">
-          <i class="fab fa-discord"></i>
-          <h3>Discord</h3>
-          <p>Join the Comms</p>
+  <header class="site-header">
+    <a class="announce" href="https://discord.gg/3aAG7prQm3" target="_blank" rel="noopener">
+      <span class="announce__long">Pre-Alpha 1.00 is almost here. The release date drops on Discord first.</span>
+      <span class="announce__short">Pre-Alpha 1.00 is almost here.</span>
+      <span class="announce__cta">Join the Discord <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a class="nav__brand" href="#top" aria-label="PLANEX home">
+        <img src="assets/img/planex-wordmark-640.png" alt="PLANEX" width="640" height="152">
+      </a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav__toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__links">
+          <li><a href="#prealpha">Pre-Alpha</a></li>
+          <li><a href="#universe">Universe</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm" href="https://discord.gg/3aAG7prQm3" target="_blank" rel="noopener">
+          <svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg> Join the Discord
         </a>
       </div>
-    </div>
-  </section>
+    </nav>
+  </header>
 
-  <section class="faq">
-    <div class="container">
-      <h2 class="section-title">Data Archives</h2>
-      <p class="section-subtitle">Frequently Asked Questions</p>
-      <div class="faq-grid">
-        <div class="faq-item">
-          <h3 class="faq-question">When does Planex release?</h3>
-          <p class="faq-answer">Planex is currently in early development. Stay tuned to our Discord and YouTube channels for updates on alpha testing and official release dates.</p>
-        </div>
-        <div class="faq-item">
-          <h3 class="faq-question">How can I get alpha access?</h3>
-          <p class="faq-answer">Alpha access opportunities will be announced through our Discord server. Join our community to be the first to know!</p>
-        </div>
-        <div class="faq-item">
-          <h3 class="faq-question">What platforms will Planex be available on?</h3>
-          <p class="faq-answer">Planex is being developed exclusively for Roblox, which means you'll be able to play it on PC, mobile devices, and console.</p>
-        </div>
-        <div class="faq-item">
-          <h3 class="faq-question">Will there be multiplayer features?</h3>
-          <p class="faq-answer">Yes! Planex is designed with multiplayer experiences in mind. Team up with friends to explore vast planetary systems and create factions to dominate the galaxy!</p>
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__media" aria-hidden="true">
+        <img src="assets/img/hero-ringed-sunrise.webp"
+             srcset="assets/img/hero-ringed-sunrise-960.webp 960w, assets/img/hero-ringed-sunrise.webp 1737w"
+             sizes="100vw" width="1737" height="1139" alt="" fetchpriority="high" decoding="async">
+      </div>
+      <div class="hero__shade" aria-hidden="true"></div>
+
+      <div class="hero__content container">
+        <p class="readout readout--status">
+          <span class="readout__main">Pre-Alpha 1.00 <span class="readout__sep" aria-hidden="true">|</span> Almost here</span>
+          <span class="readout__sub">PLANEX <span aria-hidden="true">|</span> Roblox</span>
+        </p>
+        <h1 id="hero-title" class="hero__title">
+          <img class="hero__logo" src="assets/img/planex-wordmark-640.png"
+               srcset="assets/img/planex-wordmark-640.png 640w, assets/img/planex-wordmark.png 1536w"
+               sizes="(min-width: 700px) 560px, 82vw" alt="PLANEX" width="640" height="152">
+        </h1>
+        <p class="hero__tagline">Every star is a solar system. Every solar system has worlds.</p>
+        <p class="hero__lede">A procedurally generated space exploration and survival game on Roblox, <strong>rebuilt from the ground up</strong>. Leave the surface, cross the void and find what's waiting out there. The first playable pre-alpha is almost here.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="https://discord.gg/3aAG7prQm3" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg> Join the Discord
+          </a>
+          <a class="btn btn--line" href="#universe">
+            See the worlds <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
         </div>
       </div>
-    </div>
-  </section>
+
+      <div class="hero__hud container" aria-hidden="true">
+        <span>Explore · Survive · Conquer</span>
+        <span class="hero__scroll">Scroll</span>
+      </div>
+    </section>
+
+    <!-- PRE-ALPHA -->
+    <section class="section prealpha" id="prealpha" aria-labelledby="prealpha-title">
+      <div class="container prealpha__grid">
+        <div class="prealpha__intro">
+          <h2 id="prealpha-title" class="h2">Pre-Alpha 1.00 is almost here</h2>
+          <p class="lead">PLANEX has been completely rebuilt with a new foundation, new worlds and a new look, and the first playable pre-alpha is nearly ready. The exact date and access details drop on Discord first.</p>
+          <p class="prealpha__note">The pre-alpha is the first playable step, not the finished game. Expect rough edges, missing systems and fast, frequent changes, and help us shape what comes next.</p>
+        </div>
+        <div class="prealpha__ask">
+          <a class="ask" href="https://discord.gg/3aAG7prQm3" target="_blank" rel="noopener">
+            <svg class="ask__icon" aria-hidden="true"><use href="#i-discord"/></svg>
+            <span class="ask__title">Join the Discord</span>
+            <span class="ask__text">Release date, access details and dev updates land here first.</span>
+            <span class="ask__go">Open Discord <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </a>
+          <ul class="also">
+            <li><a href="https://www.roblox.com/communities/1022796923" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-roblox"/></svg><span><strong>Roblox community</strong> Be ready the moment the pre-alpha goes live.</span></a></li>
+            <li><a href="https://www.youtube.com/@LuanacyRoblox" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg><span><strong>YouTube devlogs</strong> Watch the rebuild come together.</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIVERSE / FEATURES -->
+    <section class="section universe" id="universe" aria-labelledby="universe-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="universe-title" class="h2">Built to be explored</h2>
+          <p class="lead">Star systems, planets and moons are generated procedurally, so every system you visit is its own place with its own conditions.</p>
+        </header>
+
+        <article class="feature">
+          <figure class="feature__media frame">
+            <img src="assets/img/map-system.webp" srcset="assets/img/map-system-800.webp 800w, assets/img/map-system.webp 1476w"
+                 sizes="(min-width: 960px) 58vw, 100vw" width="1476" height="454" loading="lazy" decoding="async"
+                 alt="In-game system map showing a central star surrounded by orbital paths and a wide outer belt">
+          </figure>
+          <div class="feature__body">
+            <h3 class="h3">Every star is a solar system</h3>
+            <p>Each star anchors its own system of orbiting planets, moons and belts. Pull up the system map to see the whole thing: orbits, bodies and where you're headed next.</p>
+          </div>
+        </article>
+
+        <article class="feature feature--flip">
+          <figure class="feature__media frame">
+            <img src="assets/img/altitude-aetuke-c.webp" srcset="assets/img/altitude-aetuke-c-800.webp 800w, assets/img/altitude-aetuke-c.webp 1917w"
+                 sizes="(min-width: 960px) 58vw, 100vw" width="1917" height="1076" loading="lazy" decoding="async"
+                 alt="High above the mountains of Aetuke-c, the horizon curves away under a thin blue atmosphere. The suit readout shows -62.69 °C at 13:38.">
+          </figure>
+          <div class="feature__body">
+            <h3 class="h3">Step off the edge of the world</h3>
+            <p>With true simulated atmospheric scattering, leave the ground behind and climb until the horizon curves away, then keep going into open space. Navigation markers track planets and their distance, so the next world is always a destination, not just scenery.</p>
+          </div>
+        </article>
+
+        <article class="feature">
+          <figure class="feature__media frame hud-frame">
+            <img src="assets/img/surface-aetuke-d.webp" srcset="assets/img/surface-aetuke-d-800.webp 800w, assets/img/surface-aetuke-d.webp 1490w"
+                 sizes="(min-width: 960px) 58vw, 100vw" width="1490" height="1027" loading="lazy" decoding="async"
+                 alt="Night on the frozen world Aetuke-d: jagged dark mountains under a purple dusk and a bright band of stars">
+            <div class="game-hud" aria-hidden="true">
+              <span class="game-hud__bar"></span>
+              <span class="game-hud__temp">-118.65 °C | 04:13</span>
+              <span class="game-hud__id">Aetuke-d | uID 98911-4</span>
+            </div>
+          </figure>
+          <div class="feature__body">
+            <h3 class="h3">Every surface has conditions</h3>
+            <p>Your suit reads the world around you: surface temperature, local time and which body you're standing on. Night on Aetuke-d drops well below −100 °C, and survival starts with knowing where you are.</p>
+          </div>
+        </article>
+
+        <article class="feature feature--flip">
+          <figure class="feature__media frame">
+            <img src="assets/img/map-local.webp" srcset="assets/img/map-local-800.webp 800w, assets/img/map-local.webp 1336w"
+                 sizes="(min-width: 960px) 58vw, 100vw" width="1336" height="823" loading="lazy" decoding="async"
+                 alt="Close-up system map of a cratered moon with orbit lines and a 'You are here' marker">
+          </figure>
+          <div class="feature__body">
+            <h3 class="h3">Always know where you are</h3>
+            <p>Zoom from a whole system down to a single moon. Orbits, bodies and your own position are mapped live, so you can plan the route before you commit to the jump.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- WORLD SNAPSHOTS: examples from an infinite universe, not a list -->
+    <section class="section worlds" aria-labelledby="worlds-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="worlds-title" class="h2">Infinite worlds. Here are three.</h2>
+          <p class="lead">The universe is procedurally generated and never runs out. These are just snapshots of places we stopped on the way, with the readings the suit gave at the time. Every star you fly to has worlds of its own.</p>
+        </header>
+        <ul class="world-grid">
+          <li class="world">
+            <figure class="world__media world__media--right">
+              <img src="assets/img/surface-aetuke-b-800.webp" width="800" height="328" loading="lazy" decoding="async"
+                   alt="Rolling dunes on Aetuke-b glowing orange under a low sun">
+            </figure>
+            <h3 class="world__name">Aetuke-b</h3>
+            <p class="readout">
+              <span class="readout__main" aria-hidden="true">68.90 °C <span class="readout__sep">|</span> 17:57</span>
+              <span class="readout__sub" aria-hidden="true">uID 98911-2</span>
+              <span class="visually-hidden">Surface 68.90 °C, local time 17:57, uID 98911-2</span>
+            </p>
+            <p class="world__text">Dunes as far as the horizon. Close to sunset, the ground still reads almost 69 °C.</p>
+          </li>
+          <li class="world">
+            <figure class="world__media">
+              <img src="assets/img/surface-aetuke-c-800.webp" width="800" height="533" loading="lazy" decoding="async"
+                   alt="An astronaut on Aetuke-c looks up at the galactic band over a line of trees">
+            </figure>
+            <h3 class="world__name">Aetuke-c</h3>
+            <p class="readout">
+              <span class="readout__main" aria-hidden="true">160.59 °F <span class="readout__sep">|</span> 20:20</span>
+              <span class="readout__sub" aria-hidden="true">uID 98911-3</span>
+              <span class="visually-hidden">Surface 160.59 °F, local time 20:20, uID 98911-3</span>
+            </p>
+            <p class="world__text">An ocean world with forested coastlines. Its nights open onto a sky full of stars.</p>
+          </li>
+          <li class="world">
+            <figure class="world__media">
+              <img src="assets/img/orbit-alce-d-700.webp" width="700" height="469" loading="lazy" decoding="async"
+                   alt="The blue world Alce-d seen from orbit with a small red moon nearby">
+            </figure>
+            <h3 class="world__name">Alce-d</h3>
+            <p class="readout">
+              <span class="readout__main" aria-hidden="true">From orbit <span class="readout__sep">|</span> 1 moon</span>
+              <span class="readout__sub" aria-hidden="true">uID 49230-4</span>
+              <span class="visually-hidden">Observed from orbit, one red companion moon, uID 49230-4</span>
+            </p>
+            <p class="world__text">A blue world in a different system entirely, shadowed by a rust-red moon.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- VISION BAND -->
+    <section class="vision" aria-labelledby="vision-title">
+      <div class="vision__media" aria-hidden="true">
+        <img src="assets/img/surface-aetuke-b.webp" srcset="assets/img/surface-aetuke-b-800.webp 800w, assets/img/surface-aetuke-b.webp 1907w"
+             sizes="100vw" width="1907" height="782" alt="" loading="lazy" decoding="async">
+      </div>
+      <div class="container vision__inner">
+        <h2 id="vision-title" class="vision__quote">You begin with nothing.<br>The universe begins everywhere.</h2>
+        <div class="vision__copy">
+          <p>Awaken stranded with a damaged exosuit and a ship that won't fly. Your first objective: survive. From there, gather resources, craft new technology and rebuild your hyperdrive to take to the stars.</p>
+          <p>Build bases, trade with other explorers, chase anomalies through the void, and team up with friends to make your mark on the galaxy. That's where PLANEX is headed, and the pre-alpha is the first step.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKIES IN DEVELOPMENT -->
+    <section class="section skies" id="skies" aria-labelledby="skies-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="skies-title" class="h2">Skies worth flying through</h2>
+          <p class="lead">Volumetric clouds are the next big step for planetary atmospheres. These shots come from our cloud prototypes and show the visual direction we're aiming for.</p>
+        </header>
+        <p class="notice" role="note">
+          <span class="tag">Not in pre-alpha</span>
+          <span class="notice__text">Volumetric clouds are still being built and <strong>are not part of the Pre-Alpha 1.00 build</strong>. Images below are a visual target, not current gameplay.</span>
+        </p>
+        <div class="skies__grid">
+          <figure class="sky sky--wide frame">
+            <img src="assets/img/sky-clouds-sun.webp" srcset="assets/img/sky-clouds-sun-800.webp 800w, assets/img/sky-clouds-sun.webp 1600w"
+                 sizes="(min-width: 960px) 66vw, 100vw" width="1600" height="757" loading="lazy" decoding="async"
+                 alt="Prototype volumetric clouds: a towering cloud bank beneath a bright sun in a deep blue sky">
+            <figcaption><span class="tag">Prototype</span> Cloud bank at altitude</figcaption>
+          </figure>
+          <figure class="sky frame">
+            <img src="assets/img/sky-clouds-blue-800.webp" width="800" height="377" loading="lazy" decoding="async"
+                 alt="Prototype volumetric clouds drifting over a hazy horizon">
+            <figcaption><span class="tag">Prototype</span> Cumulus over haze</figcaption>
+          </figure>
+          <figure class="sky frame">
+            <img src="assets/img/sky-clouds-above-800.webp" width="800" height="387" loading="lazy" decoding="async"
+                 alt="Prototype volumetric clouds seen from above, casting shadows on the ground far below">
+            <figcaption><span class="tag">Prototype</span> Looking down through the layer</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP -->
+    <section class="section roadmap" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="roadmap-title" class="h2">Where development stands</h2>
+          <p class="lead">A rough picture of what's in the rebuilt game today and what's still ahead. Priorities shift as we build. Discord has the latest.</p>
+        </header>
+        <div class="roadmap__grid">
+          <section class="phase phase--now" aria-labelledby="phase-now">
+            <h3 id="phase-now" class="phase__title"><span class="phase__status">Rebuilt</span> In the rebuilt game</h3>
+            <ul class="phase__list">
+              <li>Procedural star systems, planets and moons</li>
+              <li>Ringed worlds, atmospheres and day/night skies</li>
+              <li>Open-space travel between bodies</li>
+              <li>Live system map with orbits and navigation markers</li>
+              <li>Surface temperature and local-time readouts</li>
+              <li>Spaceship Mechanics</li>
+            </ul>
+          </section>
+          <section class="phase phase--next" aria-labelledby="phase-next">
+            <h3 id="phase-next" class="phase__title"><span class="phase__status">In development</span> Being built now</h3>
+            <ul class="phase__list">
+              <li>Volumetric clouds and richer atmospheres</li>
+              <li>Survival systems for hostile environments</li>
+              <li>Pre-alpha polish, performance and feedback fixes</li>
+            </ul>
+          </section>
+          <section class="phase phase--later" aria-labelledby="phase-later">
+            <h3 id="phase-later" class="phase__title"><span class="phase__status">On the horizon</span> The long voyage</h3>
+            <ul class="phase__list">
+              <li>Resource gathering and crafting</li>
+              <li>Ship repair and the hyperdrive</li>
+              <li>Bases and outposts</li>
+              <li>Trading between explorers</li>
+              <li>Co-op crews and factions</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="gallery-title" class="h2">Captured in-engine</h2>
+          <p class="lead">Screenshots from the rebuilt PLANEX. Select any image to view it full size.</p>
+        </header>
+        <ul class="gallery__grid" data-gallery>
+          <li class="g g--hero"><a href="assets/img/hero-ringed-sunrise.webp" data-caption="Sunrise over a ringed world">
+            <img src="assets/img/hero-ringed-sunrise-960.webp" width="960" height="629" loading="lazy" decoding="async" alt="Sunrise breaking over the curve of a ringed planet, its rings sweeping across the frame">
+            <span class="g__zoom" aria-hidden="true"><svg class="icon"><use href="#i-expand"/></svg></span></a></li>
+          <li class="g g--wide"><a href="assets/img/surface-aetuke-b.webp" data-caption="Low sun over the dunes of Aetuke-b, 68.90 °C">
+            <img src="assets/img/surface-aetuke-b-800.webp" width="800" height="328" loading="lazy" decoding="async" alt="Orange dunes on Aetuke-b under a low sun">
+            <span class="g__zoom" aria-hidden="true"><svg class="icon"><use href="#i-expand"/></svg></span></a></li>
+          <li class="g"><a href="assets/img/altitude-aetuke-c.webp" data-caption="Climbing above Aetuke-c, -62.69 °C">
+            <img src="assets/img/altitude-aetuke-c-800.webp" width="800" height="449" loading="lazy" decoding="async" alt="The curved horizon of Aetuke-c seen from high above its mountains">
+            <span class="g__zoom" aria-hidden="true"><svg class="icon"><use href="#i-expand"/></svg></span></a></li>
+          <li class="g"><a href="assets/img/orbit-alce-d.webp" data-caption="Alce-d and its red moon">
+            <img src="assets/img/orbit-alce-d-700.webp" width="700" height="469" loading="lazy" decoding="async" alt="The blue planet Alce-d with a small red moon">
+            <span class="g__zoom" aria-hidden="true"><svg class="icon"><use href="#i-expand"/></svg></span></a></li>
+          <li class="g g--wide"><a href="assets/img/surface-aetuke-d.webp" data-caption="Twilight on Aetuke-d, -118.65 °C">
+            <img src="assets/img/surface-aetuke-d-800.webp" width="800" height="551" loading="lazy" decoding="async" alt="Dark mountains on Aetuke-d under a purple twilight sky">
+            <span class="g__zoom" aria-hidden="true"><svg class="icon"><use href="#i-expand"/></svg></span></a></li>
+          <li class="g"><a href="assets/img/surface-aetuke-c.webp" data-caption="Nightfall on Aetuke-c">
+            <img src="assets/img/surface-aetuke-c-800.webp" width="800" height="533" loading="lazy" decoding="async" alt="An astronaut watching the galactic band at night on Aetuke-c">
+            <span class="g__zoom" aria-hidden="true"><svg class="icon"><use href="#i-expand"/></svg></span></a></li>
+          <li class="g"><a href="assets/img/map-local.webp" data-caption="Local map: you are here">
+            <img src="assets/img/map-local-800.webp" width="800" height="493" loading="lazy" decoding="async" alt="Local map of a moon with orbits and a 'You are here' marker">
+            <span class="g__zoom" aria-hidden="true"><svg class="icon"><use href="#i-expand"/></svg></span></a></li>
+          <li class="g g--wide"><a href="assets/img/sky-clouds-sun.webp" data-caption="Volumetric cloud prototype (in development, not in pre-alpha)" data-prototype>
+            <img src="assets/img/sky-clouds-sun-800.webp" width="800" height="379" loading="lazy" decoding="async" alt="Prototype volumetric clouds under a bright sun">
+            <span class="tag g__tag">Prototype</span>
+            <span class="g__zoom" aria-hidden="true"><svg class="icon"><use href="#i-expand"/></svg></span></a></li>
+          <li class="g g--wide"><a href="assets/img/sky-clouds-above.webp" data-caption="Volumetric cloud prototype (in development, not in pre-alpha)" data-prototype>
+            <img src="assets/img/sky-clouds-above-800.webp" width="800" height="387" loading="lazy" decoding="async" alt="Prototype volumetric clouds seen from above">
+            <span class="tag g__tag">Prototype</span>
+            <span class="g__zoom" aria-hidden="true"><svg class="icon"><use href="#i-expand"/></svg></span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <header class="section-head">
+          <h2 id="faq-title" class="h2">Frequently asked questions</h2>
+        </header>
+        <div class="faq__list">
+          <details class="qa" open>
+            <summary>When does the pre-alpha release?</summary>
+            <div class="qa__a"><p>Very soon. Pre-Alpha 1.00 is almost here, and the exact date and access details will be announced on our <a href="https://discord.gg/3aAG7prQm3" target="_blank" rel="noopener">Discord</a> first. Joining the <a href="https://www.roblox.com/communities/1022796923" target="_blank" rel="noopener">Roblox community</a> is the best way to be ready on day one. The pre-alpha is the first playable step; the full game is still being built.</p></div>
+          </details>
+          <details class="qa">
+            <summary>What does "rebuilt" mean? Is this the same game?</summary>
+            <div class="qa__a"><p>PLANEX has been rebuilt from the ground up: new world generation, new visuals and a new foundation for everything that comes next. Everything on this site shows the rebuilt version.</p></div>
+          </details>
+          <details class="qa">
+            <summary>Are the volumetric clouds in the pre-alpha?</summary>
+            <div class="qa__a"><p>No. Volumetric clouds are in development and are not part of the Pre-Alpha 1.00 build. The cloud images on this site come from prototypes and show the visual direction we're working toward.</p></div>
+          </details>
+          <details class="qa">
+            <summary>What should I expect from a pre-alpha?</summary>
+            <div class="qa__a"><p>An early, evolving build. Some systems from the long-term vision, like crafting, bases and trading, won't be there yet, and you'll likely run into bugs. Your feedback on Discord directly shapes what we build next.</p></div>
+          </details>
+          <details class="qa">
+            <summary>What platforms will PLANEX be on?</summary>
+            <div class="qa__a"><p>PLANEX is being built exclusively for Roblox, which runs on PC, mobile and console.</p></div>
+          </details>
+          <details class="qa">
+            <summary>Will there be multiplayer?</summary>
+            <div class="qa__a"><p>Yes. PLANEX is designed with multiplayer in mind. The long-term goal is for you to team up with friends to explore planetary systems and form factions across the galaxy.</p></div>
+          </details>
+          <details class="qa">
+            <summary>How can I support development?</summary>
+            <div class="qa__a"><p>Join the community, share feedback, and if you'd like to support the project directly, you can do so on <a href="https://www.patreon.com/cw/PLANEX_ROBLOX" target="_blank" rel="noopener">Patreon</a>.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA + CHANNELS -->
+    <section class="final" id="community" aria-labelledby="final-title">
+      <div class="final__media" aria-hidden="true">
+        <img src="assets/img/hero-ringed-sunrise.webp" srcset="assets/img/hero-ringed-sunrise-960.webp 960w, assets/img/hero-ringed-sunrise.webp 1737w"
+             sizes="100vw" width="1737" height="1139" alt="" loading="lazy" decoding="async">
+      </div>
+      <div class="container final__inner">
+        <p class="readout readout--status">
+          <span class="readout__main">Pre-Alpha 1.00 <span class="readout__sep" aria-hidden="true">|</span> Almost here</span>
+        </p>
+        <h2 id="final-title" class="h2">Be there for first launch</h2>
+        <p class="lead">The release date, access details and every dev update land on Discord first. If you only join one thing, join this.</p>
+        <div class="actions">
+          <a class="btn btn--primary btn--lg" href="https://discord.gg/3aAG7prQm3" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg> Join the Discord
+          </a>
+        </div>
+        <ul class="channels" aria-label="Other places to follow PLANEX">
+          <li><a href="https://www.roblox.com/communities/1022796923" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-roblox"/></svg> Roblox community</a></li>
+          <li><a href="https://www.youtube.com/@LuanacyRoblox" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg> YouTube devlogs</a></li>
+          <li><a href="https://www.patreon.com/cw/PLANEX_ROBLOX" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-patreon"/></svg> Support on Patreon</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
-    <div class="container">
-      <p>Planex © 2026. Not affiliated with the Roblox Corporation.</p>
+    <div class="container footer__inner">
+      <a class="footer__brand" href="#top"><img src="assets/img/planex-wordmark-640.png" alt="PLANEX" width="640" height="152" loading="lazy"></a>
+      <nav class="footer__links" aria-label="Community">
+        <a href="https://discord.gg/3aAG7prQm3" target="_blank" rel="noopener" aria-label="Discord"><svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg></a>
+        <a href="https://www.roblox.com/communities/1022796923" target="_blank" rel="noopener" aria-label="Roblox community"><svg class="icon" aria-hidden="true"><use href="#i-roblox"/></svg></a>
+        <a href="https://www.youtube.com/@LuanacyRoblox" target="_blank" rel="noopener" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg></a>
+        <a href="https://www.patreon.com/cw/PLANEX_ROBLOX" target="_blank" rel="noopener" aria-label="Patreon"><svg class="icon" aria-hidden="true"><use href="#i-patreon"/></svg></a>
+      </nav>
+      <div class="footer__fine">
+        <p>All imagery captured in-engine from the rebuilt PLANEX. Volumetric cloud images are in-development prototypes and not part of the pre-alpha.</p>
+        <p>PLANEX © 2026. Not affiliated with the Roblox Corporation.</p>
+      </div>
     </div>
   </footer>
 
-  <script>
-    document.addEventListener('contextmenu', e => e.preventDefault());
+  <!-- Mobile: Discord action in thumb reach once the hero has scrolled away -->
+  <a class="dock" href="https://discord.gg/3aAG7prQm3" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+    <svg class="icon" aria-hidden="true"><use href="#i-discord"/></svg> Join the Discord
+  </a>
 
-    function createStars() {
-      const container = document.querySelector('.stars');
-      if (!container) return;
+  <!-- Lightbox -->
+  <dialog class="lightbox" aria-label="Image viewer">
+    <figure class="lightbox__figure">
+      <div class="lightbox__frame">
+        <span class="tag lightbox__tag" hidden>Prototype · not in pre-alpha</span>
+      </div>
+      <figcaption class="lightbox__caption"></figcaption>
+    </figure>
+    <button class="lightbox__btn lightbox__close" type="button" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+    <button class="lightbox__btn lightbox__prev" type="button" aria-label="Previous image"><svg class="icon" aria-hidden="true"><use href="#i-left"/></svg></button>
+    <button class="lightbox__btn lightbox__next" type="button" aria-label="Next image"><svg class="icon" aria-hidden="true"><use href="#i-right"/></svg></button>
+  </dialog>
 
-      // Static Stars
-      for (let i = 0; i < 200; i++) {
-        const star = document.createElement('div');
-        star.className = 'star';
-        star.style.left = Math.random() * 100 + '%';
-        star.style.top = Math.random() * 100 + '%';
-        star.style.animationDelay = Math.random() * 3 + 's';
-        star.style.animationDuration = (Math.random() * 3 + 2) + 's';
-        container.appendChild(star);
-      }
-
-      // Falling Stars
-      for (let i = 0; i < 15; i++) {
-        const fallingStar = document.createElement('div');
-        fallingStar.className = 'falling-star';
-        fallingStar.style.left = (Math.random() * 150 - 25) + '%';
-        fallingStar.style.animationDelay = Math.random() * 8 + 's';
-        fallingStar.style.animationDuration = (Math.random() * 2 + 4) + 's';
-        container.appendChild(fallingStar);
-      }
-    }
-
-    createStars();
-  </script>
-
+  <script src="script.js" defer></script>
 </body>
 </html>
