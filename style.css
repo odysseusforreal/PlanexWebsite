@@ -516,6 +516,20 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .phase--later .phase__list li::before { background: var(--muted); }
 
+.crew { padding-top: 0; }
+.team + .team { margin-top: clamp(56px, 7vw, 96px); }
+.team__head { margin-bottom: clamp(24px, 3vw, 36px); }
+.team__blurb { color: var(--muted); max-width: 62ch; }
+.team__roles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: clamp(28px, 3vw, 40px);
+}
+.role { border-top: 1px solid var(--line-strong); padding-top: 18px; }
+.role__title { font-family: var(--font-display); font-weight: 600; font-size: 1.4rem; line-height: 1.1; margin-bottom: 8px; }
+.role__blurb { color: var(--muted); font-size: 1rem; }
+.role__members { display: grid; gap: 4px; margin-top: 16px; font-weight: 600; font-size: 1.125rem; }
+
 /* Gallery */
 .gallery__grid {
   display: grid;
