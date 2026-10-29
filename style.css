@@ -491,6 +491,19 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 
 /* Roadmap: three columns of a flight plan, ruled rather than boxed */
+.focus { margin-bottom: clamp(56px, 7vw, 88px); }
+.focus__intro { max-width: 62ch; }
+.focus__intro .tag { margin-bottom: 14px; }
+.focus__intro p { color: var(--muted); }
+.focus__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 3vw, 40px);
+  margin-top: clamp(28px, 4vw, 40px);
+}
+.focus__stats .readout { align-content: start; gap: 6px; padding-top: 14px; border-top: 2px solid var(--atmo); }
+.focus__stats .readout__main { white-space: normal; }
+.focus__stats .readout__sub { font-size: 0.9375rem; line-height: 1.5; }
 .roadmap__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -722,6 +735,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .world-grid > :last-child .world__media { grid-row: span 4; margin-bottom: 0; }
 
   .roadmap__grid { grid-template-columns: 1fr; }
+  .focus__stats { grid-template-columns: 1fr; }
 
   .skies__grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
   .sky--wide { grid-column: 1 / -1; grid-row: auto; }
